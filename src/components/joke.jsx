@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/joke.css'
 import axios from 'axios';
 
@@ -8,7 +8,7 @@ export default function joke() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [joke, setJoke] = useState(null);
 
-    
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         // Fetch a random joke when the component mounts
@@ -44,11 +44,11 @@ export default function joke() {
             </div>
             <br></br>
             <div className='joke-btn'>
-                <button className="button" role="button" onClick={handleClick}>Tell me joke ! </button>
+                <button className="button" role="button" onClick={handleClick}>Tell me a joke ! </button>
             </div>
             <br></br>
             <div class="card">
-            {joke && (  // Check if joke is not null before accessing its properties
+                {joke && (  // Check if joke is not null before accessing its properties
                     <div className="card-content">
                         <div className="card-top">
                             <span className="card-title">{joke.id}.</span>
@@ -56,11 +56,11 @@ export default function joke() {
                         </div>
                         <div className="card-bottom">
                             <p>{joke.punchline}</p>
-                            
+
                         </div>
                     </div>
                 )}
-                
+
             </div>
 
         </div>
