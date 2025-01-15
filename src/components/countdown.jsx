@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/countdown.css";
+import SideNavigation from "./sideNavigation";
 
 export default function Countdown() {
   const second = 1000,
@@ -29,6 +30,11 @@ export default function Countdown() {
   const [headline, setHeadline] = useState("Countdown Fahmi & Shafinaz");
   const Desc = 'Raikan Cinta ❤💍'
   const [contentVisible, setContentVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavigation = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -52,6 +58,7 @@ export default function Countdown() {
 
   return (
     <div className="container">
+        <SideNavigation isOpen={isOpen} toggleNavigation={toggleNavigation} />
       <h1 id="headline">{headline}</h1>
       <div id="countdown" style={{ display: contentVisible ? "none" : "block" }}>
         <ul>
