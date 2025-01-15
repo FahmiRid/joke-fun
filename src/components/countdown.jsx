@@ -57,32 +57,34 @@ export default function Countdown() {
   }, [countDown]);
 
   return (
-    <div className="container">
+    <div className="countdown-container">
+      <div className="container">
         <SideNavigation isOpen={isOpen} toggleNavigation={toggleNavigation} />
-      <h1 id="headline">{headline}</h1>
-      <div id="countdown" style={{ display: contentVisible ? "none" : "block" }}>
-        <ul>
-          <li>
-            <span id="days">{days}</span> days
-          </li>
-          <li>
-            <span id="hours">{hours}</span> Hours
-          </li>
-          <li>
-            <span id="minutes">{minutes}</span> Minutes
-          </li>
-          <li>
-            <span id="seconds">{seconds}</span> Seconds
-          </li>
-        </ul>
-      </div>
-      <div>
-      <h1 id="headline">{Desc}</h1>
-      </div>
-      <div id="content" className="emoji" style={{ display: contentVisible ? "block" : "none" }}>
-        <span>🥳</span>
-        <span>🎉</span>
-        <span>🎂</span>
+        <h1 id="headline">{headline}</h1>
+        <div id="countdown" style={{ display: contentVisible ? "none" : "block" }}>
+          <ul>
+            <li>
+              <span id="days">{days}</span> days
+            </li>
+            <li>
+              <span id="hours">{hours}</span> Hours
+            </li>
+            <li>
+              <span id="minutes">{minutes}</span> Minutes
+            </li>
+            <li>
+              <span id="seconds">{seconds}</span> Seconds
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h1 id="headline">{Desc}</h1>
+        </div>
+        <div id="content" className="emoji" style={{ display: contentVisible ? "block" : "none" }}>
+          <span>🥳</span>
+          <span>🎉</span>
+          <span>🎂</span>
+        </div>
       </div>
     </div>
   );

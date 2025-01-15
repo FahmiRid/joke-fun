@@ -21,7 +21,7 @@ const SideNavigation = ({ isOpen, toggleNavigation }) => {
         <Link className="side-label" to="/todo">Todo-List</Link>
         </li>
         <li>
-          <a  className="side-label" href="#">Contact</a>
+        <Link className="side-label" to="/gallery">Gallery</Link>
         </li>
       </ul>
     </nav>

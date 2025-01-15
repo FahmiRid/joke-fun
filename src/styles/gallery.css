@@ -1,0 +1,60 @@
+
+.image-grid div {
+  width: 25%;
+  height: 29em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image01 {
+  background-image: url("../components/img/image1.JPG");
+}
+.image02 {
+  background-image: url("../components/img/DSC01689.JPG");
+}
+.image03 {
+  background-image: url("../components/img/DSC03246.JPG");
+}
+.image04 {
+  background-image: url("../components/img/DSC03429.JPG");
+}
+.image05 {
+  background-image: url("../components/img/DSC00471.JPG");
+}
+.image06 {
+  background-image: url("../components/img/DSC00207.JPG");
+}
+.image07 {
+  background-image: url("../components/img/DSC00457.JPG");
+}
+.image08 {
+  background-image: url("../components/img/DSC03284.JPG");
+}
+.image09 {
+  background-image: url("../components/img/DSC00233.JPG");
+}
+.image10 {
+  background-image: url("../components/img/asdd.jpg");
+}
+.image11 {
+  background-image: url("../components/img/photo_2025-01-16_01-36-34.jpg");
+}
+.image12 {
+  background-image: url("../components/img/DSC02079.JPG");
+}
+
+@media screen and (max-width: 400px) {
+  .image-grid {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .image-grid div {
+    width: 100%;
+  }
+}
