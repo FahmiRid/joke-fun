@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/countdown.css";
 import SideNavigation from "./sideNavigation";
+import AnimatedDock from "./dock";
 
 export default function Countdown() {
   const second = 1000,
@@ -28,7 +29,7 @@ export default function Countdown() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [headline, setHeadline] = useState("Countdown Fahmi & Shafinaz");
-  const Desc = 'Raikan Cinta ❤💍'
+  const Desc = "Raikan Cinta ❤💍";
   const [contentVisible, setContentVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -60,8 +61,11 @@ export default function Countdown() {
     <div className="countdown-container">
       <div className="container">
         <SideNavigation isOpen={isOpen} toggleNavigation={toggleNavigation} />
-        <h1 id="headline">{headline}</h1>
-        <div id="countdown" style={{ display: contentVisible ? "none" : "block" }}>
+        {/* <h1 id="headline">{headline}</h1> */}
+        <div
+          id="countdown"
+          style={{ display: contentVisible ? "none" : "block" }}
+        >
           <ul>
             <li>
               <span id="days">{days}</span> days
@@ -80,7 +84,14 @@ export default function Countdown() {
         <div>
           <h1 id="headline">{Desc}</h1>
         </div>
-        <div id="content" className="emoji" style={{ display: contentVisible ? "block" : "none" }}>
+        <div className="dock-cont">
+          <AnimatedDock />
+        </div>
+        <div
+          id="content"
+          className="emoji"
+          style={{ display: contentVisible ? "block" : "none" }}
+        >
           <span>🥳</span>
           <span>🎉</span>
           <span>🎂</span>
