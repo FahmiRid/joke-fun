@@ -23,6 +23,9 @@ const SideNavigation = ({ isOpen, toggleNavigation }) => {
         <li>
         <Link className="side-label" to="/gallery">Gallery</Link>
         </li>
+        <li>
+        <Link className="side-label" to="/location">Location</Link>
+        </li>
       </ul>
     </nav>
   );

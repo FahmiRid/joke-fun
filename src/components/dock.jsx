@@ -3,6 +3,7 @@ import { Github, Database, MessageCircle } from "lucide-react";
 import Clock from "../components/img/clock.png";
 import GalleryIcon from "../components/img/photos.png";
 import LoveLetterIcon from "../components/img/loveletter.png";
+import LocationIcon from "../components/img/location.png";
 import { useNavigate } from "react-router-dom";
 const styles = `
   .dock-container {
@@ -105,7 +106,11 @@ const AnimatedDock = () => {
           <img className="icon" src={GalleryIcon} alt="Gallery Icon" />
           </DockIcon>
 
-          <DockIcon label="To-do-List" path="/todo">
+          <DockIcon label="To-do-List" path="/location">
+          <img className="icon" src={LocationIcon} alt="Location" />
+          </DockIcon>
+
+          <DockIcon label="To-do-List" path="/rsvp">
           <img className="icon" src={LoveLetterIcon} alt="Love Letter Icon" />
           </DockIcon>
         </div>
