@@ -13,12 +13,15 @@ body {
 }
 
 .container-rsvp {
-  min-height: 124vh;
+  /* min-height: 124vh; */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   background-color: #d8e2d8;
+  position: relative;
+  top: 1em;
+  height: 100vh;
 }
 
 .rsvp-card {

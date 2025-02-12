@@ -4,6 +4,7 @@ import Clock from "../components/img/clock.png";
 import GalleryIcon from "../components/img/photos.png";
 import LoveLetterIcon from "../components/img/loveletter.png";
 import LocationIcon from "../components/img/location.png";
+import Home from "../components/img/home.png";
 import { useNavigate } from "react-router-dom";
 const styles = `
   .dock-container {
@@ -98,20 +99,24 @@ const AnimatedDock = () => {
             <Github className="icon" />
           </DockIcon> */}
 
-          <DockIcon label="Countdown" path="/">
+          <DockIcon label="Home" path="/">
+            <img className="icon" src={Home} alt="Home" />
+          </DockIcon>
+
+          <DockIcon label="Countdown" path="/countdown">
             <img className="icon" src={Clock} alt="Clock Icon" />
           </DockIcon>
 
           <DockIcon label="Gallery" path="/gallery">
-          <img className="icon" src={GalleryIcon} alt="Gallery Icon" />
+            <img className="icon" src={GalleryIcon} alt="Gallery Icon" />
           </DockIcon>
 
           <DockIcon label="To-do-List" path="/location">
-          <img className="icon" src={LocationIcon} alt="Location" />
+            <img className="icon" src={LocationIcon} alt="Location" />
           </DockIcon>
 
           <DockIcon label="To-do-List" path="/rsvp">
-          <img className="icon" src={LoveLetterIcon} alt="Love Letter Icon" />
+            <img className="icon" src={LoveLetterIcon} alt="Love Letter Icon" />
           </DockIcon>
         </div>
       </div>

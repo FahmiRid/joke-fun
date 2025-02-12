@@ -14,6 +14,9 @@ const SideNavigation = ({ isOpen, toggleNavigation }) => {
         </span>
       </button>
       <ul className="side-container" >
+      <li>
+          <Link className="side-label" to="/">Home</Link>
+        </li>
         <li>
           <Link className="side-label" to="/">Countdown</Link>
         </li>

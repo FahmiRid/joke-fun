@@ -6,11 +6,13 @@ import Todo from "./components/todo";
 import Gallery from "./components/gallery";
 import Location from "./components/location";
 import RSVPForm from "./components/rsvp";
+import Home from "./components/home";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Countdown />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/countdown" element={<Countdown />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/location" element={<Location />} />
