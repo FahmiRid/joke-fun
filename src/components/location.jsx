@@ -9,7 +9,7 @@ function Location() {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <div className="body-location">
       <SideNavigation isOpen={isOpen} toggleNavigation={toggleNavigation} />
       <a target="_blank">
         <div class="container">

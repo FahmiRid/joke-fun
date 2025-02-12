@@ -13,7 +13,7 @@ body {
 }
 
 .container-rsvp {
-  min-height: 100vh;
+  min-height: 124vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,6 +143,8 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    opacity: 0;
+    animation: slideDown 0.6s ease-out 0.2s forwards;
   }
   
   button {
