@@ -61,7 +61,6 @@ export default function Countdown() {
     <div className="countdown-container">
 
       <div className="container">
-        <SideNavigation isOpen={isOpen} toggleNavigation={toggleNavigation} />
         {/* <h1 id="headline">{headline}</h1> */}
         <div
           id="countdown"

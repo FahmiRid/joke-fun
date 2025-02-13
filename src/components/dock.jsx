@@ -6,6 +6,7 @@ import LoveLetterIcon from "../components/img/loveletter.png";
 import LocationIcon from "../components/img/location.png";
 import Home from "../components/img/home.png";
 import Itinerary from '../components/img/itinerary.png'
+import Contact from '../components/img/contacts.png'
 import { useNavigate } from "react-router-dom";
 const styles = `
   .dock-container {
@@ -112,8 +113,8 @@ const AnimatedDock = () => {
             <img className="icon" src={Clock} alt="Clock Icon" />
           </DockIcon>
 
-          <DockIcon label="Gallery" path="/gallery">
-            <img className="icon" src={GalleryIcon} alt="Gallery Icon" />
+          <DockIcon label="Contact" path="/contact">
+            <img className="icon" src={Contact} alt="Contact" />
           </DockIcon>
 
           <DockIcon label="To-do-List" path="/location">

@@ -8,6 +8,7 @@ import Location from "./components/location";
 import RSVPForm from "./components/rsvp";
 import Home from "./components/home";
 import Intinerary from "./components/intinerary";
+import Contact from "./components/contact";
 function App() {
   return (
     <BrowserRouter>
@@ -16,7 +17,7 @@ function App() {
         <Route path="/intinerary" element={<Intinerary />} />
         <Route path="/countdown" element={<Countdown />} />
         <Route path="/todo" element={<Todo />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/location" element={<Location />} />
         <Route path="/rsvp" element={<RSVPForm />} />
       </Routes>
