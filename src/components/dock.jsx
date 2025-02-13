@@ -104,7 +104,7 @@ const AnimatedDock = () => {
             <img className="icon" src={Home} alt="Home" />
           </DockIcon>
 
-          <DockIcon label="Itinerary" path="/">
+          <DockIcon label="Itinerary" path="/intinerary">
             <img className="icon" src={Itinerary} alt="Itinerary" />
           </DockIcon>
 

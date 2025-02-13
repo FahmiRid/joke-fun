@@ -1,4 +1,8 @@
 .dock-cont-home {
     position: relative;
-    
+}
+
+.dock-cont-intinerary {
+    position: relative;
+    top: 2em;
 }

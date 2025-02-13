@@ -7,11 +7,13 @@ import Gallery from "./components/gallery";
 import Location from "./components/location";
 import RSVPForm from "./components/rsvp";
 import Home from "./components/home";
+import Intinerary from "./components/intinerary";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/intinerary" element={<Intinerary />} />
         <Route path="/countdown" element={<Countdown />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/gallery" element={<Gallery />} />
