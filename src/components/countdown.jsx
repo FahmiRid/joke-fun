@@ -59,27 +59,28 @@ export default function Countdown() {
 
   return (
     <div className="countdown-container">
-
       <div className="container">
         {/* <h1 id="headline">{headline}</h1> */}
         <div
           id="countdown"
           style={{ display: contentVisible ? "none" : "block" }}
         >
-          <ul>
-            <li>
-              <span id="days">{days}</span> days
-            </li>
-            <li>
-              <span id="hours">{hours}</span> Hours
-            </li>
-            <li>
-              <span id="minutes">{minutes}</span> Minutes
-            </li>
-            <li>
-              <span id="seconds">{seconds}</span> Seconds
-            </li>
-          </ul>
+          <div className="countdown-label">
+            <ul>
+              <li>
+                <span id="days">{days}</span> days
+              </li>
+              <li>
+                <span id="hours">{hours}</span> Hours
+              </li>
+              <li>
+                <span id="minutes">{minutes}</span> Minutes
+              </li>
+              <li>
+                <span id="seconds">{seconds}</span> Seconds
+              </li>
+            </ul>
+          </div>
         </div>
         <div>
           <h1 id="headline">{Desc}</h1>
