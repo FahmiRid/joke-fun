@@ -13,16 +13,17 @@ body {
 }
 
 .container-rsvp {
-  min-height: 124vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  background-color: #d8e2d8;
+  background: #d8e2d8;
+  height: 100vh;
+  text-align: center;
 }
 
 .rsvp-card {
-  width: 100%;
+  width: 75%;
   max-width: 28rem;
   background-color: #d8e2d8;
   border-radius: 0.5rem;
@@ -33,7 +34,8 @@ body {
   transform: translateY(20px);
   animation: fadeIn 0.6s ease-out forwards;
   position: relative;
-  bottom: 3em;
+  bottom: 1em;
+  height: 37em;
 }
 
 .rsvp-card:hover {
@@ -45,7 +47,7 @@ body {
 .rsvp-form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .rsvp-title {
@@ -137,59 +139,59 @@ body {
   color: #1f2937;
 }
 
-/* From Uiverse.io by satyamchaudharydev */ 
+/* From Uiverse.io by satyamchaudharydev */
 button {
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    opacity: 0;
-    animation: slideDown 0.6s ease-out 0.2s forwards;
-  }
-  
-  button {
-    --primary-color: #4b5563;
-    --hovered-color: #c84747;
-    position: relative;
-    display: flex;
-    font-weight: 200;
-    font-size: 20px;
-    font-family: var(--primary-font);
-    gap: 0.5rem;
-    align-items: center;
-  }
-  
-  button p {
-    margin: 0;
-    position: relative;
-    font-size: 20px;
-    color: var(--primary-color);
-  }
-  
-  button::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    left: 0;
-    bottom: -7px;
-    background: var(--hovered-color);
-    height: 2px;
-    transition: 0.3s ease-out;
-  }
-  
-  button p::before {
-    position: absolute;
-    /*   box-sizing: border-box; */
-    content: "Subscribe";
-    width: 0%;
-    inset: 0;
-    color: var(--hovered-color);
-    overflow: hidden;
-    transition: 0.3s ease-out;
-  }
-  
-  /* button:hover::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideDown 0.6s ease-out 0.2s forwards;
+}
+
+button {
+  --primary-color: #4b5563;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 200;
+  font-size: 20px;
+  font-family: var(--primary-font);
+  gap: 0.5rem;
+  align-items: center;
+}
+
+button p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+button p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Subscribe";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+/* button:hover::after {
     width: 100%;
   }
   
@@ -197,19 +199,19 @@ button {
     width: 100%;
   }
    */
-  button:hover svg {
-    transform: translateX(4px);
-    color: var(--hovered-color);
-  }
-  
-  button svg {
-    color: var(--primary-color);
-    transition: 0.2s;
-    position: relative;
-    width: 15px;
-    transition-delay: 0.2s;
-  }
-  
+button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
 
 .reply-by {
   padding-top: 1.5rem;
@@ -247,9 +249,9 @@ button {
   display: inline-block;
 }
 
-.dock-cont-rsvp{
-    position: relative;
-    top: 8em;
+.dock-cont-rsvp {
+  position: relative;
+  top: 3em;
 }
 
 /* Animations */
@@ -258,6 +260,7 @@ button {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -269,6 +272,7 @@ button {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

@@ -65,8 +65,11 @@ export default function Countdown() {
           id="countdown"
           style={{ display: contentVisible ? "none" : "block" }}
         >
-          <div className="countdown-label">
-            <ul>
+            <ul style={{
+                display: "flex",
+                position: "relative",
+                right: "1em",
+              }}>
               <li>
                 <span id="days">{days}</span> days
               </li>
@@ -80,7 +83,7 @@ export default function Countdown() {
                 <span id="seconds">{seconds}</span> Seconds
               </li>
             </ul>
-          </div>
+          
         </div>
         <div>
           <h1 id="headline">{Desc}</h1>
