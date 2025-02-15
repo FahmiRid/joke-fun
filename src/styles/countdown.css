@@ -19,6 +19,8 @@
     max-width: 800px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    right: 1em;
 }
 
 h1 {
@@ -53,6 +55,7 @@ li span {
 .dock-cont-countdown {
     position: relative;
     top: 15em;
+    left: 1em;
 }
 
 
