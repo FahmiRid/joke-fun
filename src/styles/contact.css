@@ -174,4 +174,19 @@
     .contact-name li span {
         font-size: 1rem;
     }
+
+    .title-contact {
+        display: flex;
+        position: relative;
+        top: 9em;
+    }
+
+    .location-icon {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        bottom: 11em;
+        gap: 8em;
+        cursor: pointer;
+    }
 }
