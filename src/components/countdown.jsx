@@ -29,7 +29,7 @@ export default function Countdown() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [headline, setHeadline] = useState("Countdown Fahmi & Shafinaz");
-  const Desc = "Raikan Cinta ❤💍";
+  const Desc = "#keShayanganFahmi ❤💍";
   const [contentVisible, setContentVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -68,7 +68,6 @@ export default function Countdown() {
             <ul style={{
                 display: "flex",
                 position: "relative",
-                right: "1em",
               }}>
               <li>
                 <span id="days">{days}</span> days
@@ -85,10 +84,10 @@ export default function Countdown() {
             </ul>
           
         </div>
-        <div>
+        <div className="label-countdown">
           <h1 id="headline">{Desc}</h1>
         </div>
-        <div className="dock-cont">
+        <div className="dock-cont-countdown">
           <AnimatedDock />
         </div>
         <div
