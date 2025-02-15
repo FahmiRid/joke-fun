@@ -4,7 +4,6 @@ import Countdown from "./components/countdown";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Todo from "./components/todo";
 import Gallery from "./components/gallery";
-import Location from "./components/location";
 import RSVPForm from "./components/rsvp";
 import Home from "./components/home";
 import Intinerary from "./components/intinerary";
@@ -18,7 +17,6 @@ function App() {
         <Route path="/countdown" element={<Countdown />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/location" element={<Location />} />
         <Route path="/rsvp" element={<RSVPForm />} />
       </Routes>
     </BrowserRouter>

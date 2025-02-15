@@ -117,10 +117,6 @@ const AnimatedDock = () => {
             <img className="icon" src={Contact} alt="Contact" />
           </DockIcon>
 
-          <DockIcon label="To-do-List" path="/location">
-            <img className="icon" src={LocationIcon} alt="Location" />
-          </DockIcon>
-
           <DockIcon label="To-do-List" path="/rsvp">
             <img className="icon" src={LoveLetterIcon} alt="Love Letter Icon" />
           </DockIcon>
