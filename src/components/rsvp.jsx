@@ -6,6 +6,7 @@ import supabase from "./supabase";
 const RSVPForm = () => {
   const [names, setNames] = useState("");
   const [wishNames, setWishNames] = useState("");
+  const [description, setDescription] = useState("");
   const [attendance, setAttendance] = useState(0);
   const [wish, setWish] = useState("");
   const [showWishForm, setShowWishForm] = useState(false);
@@ -17,6 +18,7 @@ const RSVPForm = () => {
       {
         name: names,
         attend: attendance,
+        description: description
       },
     ]);
     if (error) {
@@ -27,17 +29,8 @@ const RSVPForm = () => {
         text: "",
         icon: "success",
       });
+      fetchAttendanceData();
     }
-  };
-
-  const handleSubmitWish = e => {
-    e.preventDefault();
-    const newWish = {
-      name: wishNames,
-      wish: attendance,
-    };
-    setWishes([...wishes, newWish]); // Add new wish to the list
-    setWishNames("");
   };
 
   const fetchAttendanceData = async () => {
@@ -100,6 +93,15 @@ const RSVPForm = () => {
               </div>
             </div>
 
+            <div>
+              <textarea
+                value={description}
+                onChange={e => setDescription(e.target.value)}
+                className="text-input"
+                placeholder="Wish"
+              />
+            </div>
+
             <button onClick={handleSubmit}>
               <p>Submit</p>
               <svg
@@ -117,51 +119,6 @@ const RSVPForm = () => {
                 ></path>
               </svg>
             </button>
-            <div>
-              <button
-                onClick={e => {
-                  e.preventDefault();
-                  setShowWishForm(!showWishForm);
-                }}
-              >
-                <p>Send a Wish</p>
-              </button>
-
-              {showWishForm && (
-                <div className="wish-form">
-                  <input
-                    type="text"
-                    value={wishNames}
-                    onChange={e => setWishNames(e.target.value)}
-                    className="text-input"
-                    placeholder="Name"
-                  />
-                  <textarea
-                    value={attendance}
-                    onChange={e => setAttendance(e.target.value)}
-                    className="text-input"
-                    placeholder="Wish"
-                  />
-                  <button onClick={handleSubmitWish}>
-                    <p>Send</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              )}
-            </div>
 
             {/* Comment Section */}
             <div className="comment-section">
@@ -170,7 +127,7 @@ const RSVPForm = () => {
                 {wishes.map((wish, index) => (
                   <div key={index} className="comment-card">
                     <p>
-                      <strong>{wish.name}</strong>: {wish.wish}
+                      <strong>{wish.name}</strong>: {wish.description}
                     </p>
                   </div>
                 ))}
