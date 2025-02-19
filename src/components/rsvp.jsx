@@ -1,23 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/rsvp.css";
 import AnimatedDock from "./dock";
 import Swal from "sweetalert2";
-
+import supabase from "./supabase";
 const RSVPForm = () => {
   const [names, setNames] = useState("");
   const [wishNames, setWishNames] = useState("");
-  const [attendance, setAttendance] = useState("");
+  const [attendance, setAttendance] = useState(0);
   const [wish, setWish] = useState("");
   const [showWishForm, setShowWishForm] = useState(false);
   const [wishes, setWishes] = useState([]); // New state to store wishes
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    Swal.fire({
-      title: "Kehadiran di terima ",
-      text: "",
-      icon: "success",
-    });
+    const { data, error } = await supabase.from("attendance").insert([
+      {
+        name: names,
+        attend: attendance,
+      },
+    ]);
+    if (error) {
+      console.error(error);
+    } else {
+      Swal.fire({
+        title: "Kehadiran di terima ",
+        text: "",
+        icon: "success",
+      });
+    }
   };
 
   const handleSubmitWish = e => {
@@ -29,6 +39,19 @@ const RSVPForm = () => {
     setWishes([...wishes, newWish]); // Add new wish to the list
     setWishNames("");
   };
+
+  const fetchAttendanceData = async () => {
+    const { data, error } = await supabase.from("attendance").select("*");
+    if (error) {
+      console.error(error);
+    } else {
+      setWishes(data);
+    }
+  };
+
+  useEffect(() => {
+    fetchAttendanceData();
+  }, []);
 
   return (
     <>
@@ -53,8 +76,8 @@ const RSVPForm = () => {
                   type="radio"
                   id="attend"
                   name="attendance"
-                  value="attend"
-                  onChange={e => setAttendance(e.target.value)}
+                  value={1} // Use 1 for attend
+                  onChange={e => setAttendance(parseInt(e.target.value))}
                   className="radio-input"
                 />
                 <label htmlFor="attend" className="radio-label">
@@ -67,8 +90,8 @@ const RSVPForm = () => {
                   type="radio"
                   id="cannot"
                   name="attendance"
-                  value="cannot"
-                  onChange={e => setAttendance(e.target.value)}
+                  value={0} // Use 0 for cannot attend
+                  onChange={e => setAttendance(parseInt(e.target.value))}
                   className="radio-input"
                 />
                 <label htmlFor="cannot" className="radio-label">
