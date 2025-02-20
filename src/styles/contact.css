@@ -53,6 +53,12 @@
     gap: 9.4em;
 }
 
+.icon-container {
+    display: flex;
+    position: relative;
+    top: 0.5em;
+}
+
 .contact-name {
     display: flex;
     flex-direction: column;
@@ -87,6 +93,24 @@
     bottom: 8em;
     gap: 8em;
     cursor: pointer;
+}
+
+.iframe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe-container iframe {
+    border: none;
+    width: 80%;
+    height: 80%;
 }
 
 /* Media queries for mobile view */
@@ -159,6 +183,12 @@
         right: 0.5em;
         gap: 5.9em;
         flex-direction: column;
+    }
+
+    .icon-container {
+        display: flex;
+        position: relative;
+        top: 0.5em;
     }
 
     .contact-name {
